@@ -28,6 +28,16 @@ int shiftingBits(int n)
 	int ans=((n^pow)<<1) + 1;
 	return ans;
 }
+int math(int n)
+{
+    int pow = 1;
+    int temp = n;
+    while(temp>>=1)
+    {
+        pow<<=1;
+    }
+    int ans=1+(n-pow)*2;	
+}
 int main() {
 	int cases,n;
 	cin>>cases;
