@@ -1,6 +1,33 @@
 #include <iostream>
 using namespace std;
 
+int log2(int n)
+{
+	int log = 0;
+	while(n>>=1) //Divding by 2 
+	{
+		log++;
+	}
+	return log;
+}
+
+int shiftAndLog(int n)
+{
+	// return ( ( n^(1<<log2(n)) )<<1 )+1;
+	
+	return ( ( n&( (1<<log2(n)) -1) )<<1 )+1;
+}
+int shiftingBits(int n)
+{
+        int pow = 1, temp =n, msb = 0;
+        while(temp>>=1)
+        {
+            msb++;
+        }
+        pow<<=msb;
+	int ans=((n^pow)<<1) + 1;
+	return ans;
+}
 int main() {
 	int cases,n;
 	cin>>cases;
