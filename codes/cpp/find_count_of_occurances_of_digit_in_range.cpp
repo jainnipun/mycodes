@@ -40,18 +40,18 @@ int getNumx(int n, int x)
             {
                     total += pow;
             }
-            else if(d == x)
-            {
-                if(x!=0 || n>0)
-                {
-                    total += 1;
-                    total += rightnum;
-                }
-                if(x == 0 && n>0)
-                {
-                    total -= pow;
-                }
-            }
+	else if(d == x)
+	{
+		if(x!=0 || n>0)
+		{
+		    total += 1;
+		    total += rightnum;
+		}
+		if(x == 0 && n>0)
+		{
+		    total -= pow;
+		}
+	}
         rightnum += d *pow;
         pow = pow *10;
     }
